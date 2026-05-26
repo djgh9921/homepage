@@ -1,0 +1,183 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    --primary-text-color: #181820;
+    --secondary-text-color: #5c5c62;
+    --muted-text-color: #6a737d;
+    --accent-color: #ff9a00;
+    --border-color: #f5f5f5;
+}
+
+/* LAYOUT HELPERS */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.fh {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.fv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* MAIN WRAPPER */
+.resume {
+    max-width: 900px;
+    margin: 40px auto;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 6px 20px rgb(0 0 0 / 5%);
+}
+
+/* BLOCKS */
+.resume-block {
+    padding: 40px 0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.resume-block:last-child {
+    border-bottom: none;
+}
+
+/* CONTACT */
+.contact-info-header,
+.contact-info-sub-header {
+    text-align: center;
+}
+
+.contact-info-header {
+    color: var(--primary-text-color);
+    margin-bottom: 10px;
+}
+
+.contact-info-sub-header {
+    color: var(--secondary-text-color);
+    margin-bottom: 30px;
+}
+
+.contact-info-container {
+    align-items: center;
+}
+
+.contact-info-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-info-block-center {
+    align-items: center;
+}
+
+.contact-info-item {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}
+
+/* AVATAR */
+.contact-info-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+/* INTRO */
+.intro {
+    display: flex;
+    gap: 20px;
+}
+
+.intro-icon-wrapper {
+    width: 30px;
+}
+
+.intro-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.intro-icon path {
+    fill: var(--accent-color);
+}
+
+.intro-text {
+    color: var(--secondary-text-color);
+}
+
+/* TITLES */
+.section-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* EXPERIENCE */
+.experience {
+    margin-bottom: 25px;
+}
+
+.experience-title {
+    font-size: 18px;
+    color: var(--primary-text-color);
+}
+
+.experience-date {
+    font-size: 13px;
+    color: var(--muted-text-color);
+    margin-bottom: 8px;
+}
+
+.experience-description {
+    color: var(--secondary-text-color);
+}
+
+/* SKILLS */
+.skills-list {
+    padding-left: 18px;
+    color: var(--secondary-text-color);
+}
+
+/* MOBILE */
+@media (width <= 576px) {
+    .fh {
+        flex-direction: column;
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .contact-info-container {
+        align-items: center;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
