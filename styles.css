@@ -181,3 +181,12 @@ body {
     border: 0;
 }
 
+.intro-text {
+    display: inline-block;
+    transition: 0.25s ease;
+}
+
+.intro-text.active {
+    text-shadow: 0 0 10px currentColor;
+    transform: translateY(-1px);
+}
